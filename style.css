@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Merriweather Sans';
+}
+
+body {
+  height: 100vh;
+  background-color: whitesmoke;
+  background-size: cover;
+  background-position: center;
+  padding: 0 50px;
+  background-image: url(../ANE/gambar/Background.jpg);
+}
+
+.brody {
+  margin-top: 90px;
+  margin-left: 100px;
+  background-color: rgb(252, 252, 252);
+  width: 600px;
+  height: 260px;
+  border: 15px ;
+  padding: 20px;
+}
+
+.brody p {
+  font-family: 'Quicksand';
+  font-size: 42px;
+}
+
+.brody p.b1 {
+  font-size: 15px;
+}
+
+.brody2 {
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: 'Quicksand';
+  font-size: 23;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  font-weight: bolder;
+  text-decoration: none;
+  color: #002aff98;
+  font-size: 1rem;
+  transition-duration: 1s;
+}
+
+a:hover {
+  color: skyblue;
+  padding: 20px;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.gambar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.navbar .logo img {
+  padding-top: 41px;
+  width: 120px;
+}
+
+/*Header*/
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .links{
+  display: flex;
+  gap: 3.2rem;
+}
+
+.navbar .toogle_btn{
+  columns: red;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn {
+  background-color: orange;
+  color: red;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.action_btn:hover {
+  scale: 1.1;
+  color: #fff;
+}
+
+.action_btn:hover:active {
+  scale: 0.9;
+}
+
+/*Dropdown Menu*/
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: black;
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  height: 240px;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*Responsive Design*/
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+
+  .navbar .toogle_btn{
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}
